@@ -1,0 +1,226 @@
+@font-face {
+    font-family: "Qatar-Bold";
+    src: url("../fonts/Qatar2022Arabic-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Qatar";
+    src: url("../fonts/Qatar2022Arabic-Heavy.ttf");
+}
+
+* {
+    font-family: "Qatar-Bold";
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    background: url('../img/bg.png') no-repeat;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1#title {
+    color: white;
+    font-size: 8vh;
+    text-align: center;
+    padding-top: 4vh;
+    margin-bottom: 2vh;
+}
+
+.line-1 {
+    height: 3px;
+    background: white;
+    max-width: 15%;
+    margin: 0 auto;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.game-item {
+    width: 60%;
+    background-color: #f2f2f2;
+    border-radius: 8vh;
+    margin: 1vh 0vw;
+    border: solid 5px #7e003c;
+}
+
+.game-teams {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.team {
+    flex-grow: 2;
+    display: flex;
+}
+
+.home-team {
+    justify-content: flex-start;
+}
+
+.away-team {
+    justify-content: flex-end;
+}
+
+.game-score {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-radius: 5vh;
+    padding: 0em 3vw;
+    background-color: #460222;
+}
+
+.game-score .score {
+    color: white;
+    font-size: 6vh;
+    padding: 1vh 0vw 0vh;
+}
+
+.game-score .separator {
+    color: white;
+    font-size: 4vh;
+}
+
+.team .country-name {
+    color: black;
+    background-color: inherit;
+    font-size: 8vh;
+    padding: 0 1vw;
+    align-self: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.team .flag-country {
+    width: 11vh;
+    height: 11vh;
+    object-fit: cover;
+    border: solid 1vh transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white),
+        linear-gradient(to bottom, #fefefe, #d8d8d8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+
+.center-item-detail {
+    width: fit-content;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+}
+
+.center-item-detail .center-container {
+    position: relative;
+    color: white;
+    bottom: 1vh;
+    left: -50%;
+}
+
+.center-item-detail .center-container .center-item-info {
+    border-radius: 5vh;
+    background-color: #460222;
+}
+
+.center-item-detail .center-container .center-item-info .date-game,
+.center-item-detail .center-container .center-item-info .live-now {
+    background-color: white;
+    color: #7e003c;
+    font-family: 'Qatar';
+    padding: 0vh 1vw;
+    border: 2px solid #7e003c;
+    border-radius: 50px;
+    font-size: 2vh;
+}
+
+.center-item-detail .center-container .center-item-info .live-now {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center-item-detail .center-container .center-item-info .live-now .live-game {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #dd2e44;
+    margin-left: 4px;
+}
+
+@media only screen and (max-width: 1080px) {
+
+    html {
+        background-image: url('../img/bg-large.png');
+    }
+
+    h1#title {
+        font-size: 6vh;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
+
+    h2#date {
+        color: white;
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    .game-item {
+        width: 70%;
+        margin-top: 3vh;
+    }
+
+    .team .flag-country {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .game-score .score {
+        font-size: 3vh;
+    }
+
+    .game-score .separator {
+        font-size: 2vh;
+    }
+
+    .team .country-name {
+        font-size: 4vh;
+    }
+
+    .center-item-detail .center-container .center-item-info .date-game,
+    .center-item-detail .center-container .center-item-info .live-now {
+        font-size: 1.5vh;
+    }
+
+}
